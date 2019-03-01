@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/MainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:minHeight="112dp"
+        android:orientation="vertical"
+        android:visibility="visible"
+        tools:context=".MainActivity">
+
+
+        <com.example.hcipaintframework.MyCanvasView
+            android:id="@+id/canvasView"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:gravity="top"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            app:layout_constraintTop_toBottomOf="@+id/canvasView">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ToggleButton
+                    android:id="@+id/TogBLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/toggle_line"
+                    android:visibility="visible" />
+
+                <ToggleButton
+                    android:id="@+id/TogBCurve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/toggle_curve"
+                    android:visibility="visible" />
+
+                <ToggleButton
+                    android:id="@+id/TogBRect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/toggle_rect"
+                    android:visibility="visible" />
+
+                <ToggleButton
+                    android:id="@+id/TogBOval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/toggle_oval"
+                    android:visibility="visible" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/ColorPicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ColorB"
+                    android:visibility="visible"
+                    tools:text="Color" />
+
+                <Spinner
+                    android:id="@+id/SpinBrush"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+
+                <Switch
+                    android:id="@+id/FillSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/FillSwitch" />
+
+                <Button
+                    android:id="@+id/ClearButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=  "@string/ClearMsg"
+                    android:visibility="visible"
+                    tools:text= "@string/ClearMsg" />
+            </TableRow>
+
+        </TableLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
